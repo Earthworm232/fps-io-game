@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>FPS.IO</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Firefight.io</title>
+  <link rel="stylesheet" href="style.css">
 
-    <!-- Firebase SDKs (compat version for easier use) -->
-    <script src="https://www.gstatic.com/firebasejs/9.30.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.30.0/firebase-database-compat.js"></script>
+  <!-- Three.js -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.154.0/build/three.min.js"></script>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.30.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.30.0/firebase-database-compat.js"></script>
 </head>
 <body>
+  <!-- Lobby -->
+  <div id="lobby">
+    <h1>Firefight.io</h1>
 
-    <!-- Lobby -->
-    <div id="lobby">
-        <h1>FPS.IO</h1>
-
-        <div class="card">
-            <h3>Gamemode</h3>
-            <select id="gamemode">
-                <option value="deathmatch">Deathmatch</option>
-                <option value="battle_royale">Battle Royale</option>
-                <option value="zombies">Zombies (Singleplayer)</option>
-            </select>
-        </div>
-
-        <div class="card">
-            <h3>Party</h3>
-            <button id="createParty">Create Party</button>
-            <input id="partyCodeInput" placeholder="Enter code">
-            <button id="joinParty">Join Party</button>
-            <p id="partyStatus"></p>
-        </div>
-
-        <button id="queueButton">Queue</button>
+    <div class="card">
+      <h3>Gamemode</h3>
+      <select id="gamemode">
+        <option value="deathmatch">Deathmatch</option>
+        <option value="battle_royale">Battle Royale</option>
+      </select>
     </div>
 
-    <!-- Game Canvas -->
-    <canvas id="gameCanvas"></canvas>
+    <div class="card">
+      <h3>Party</h3>
+      <input id="playerNameInput" placeholder="Enter your name">
+      <button id="createParty">Create Party</button>
+      <input id="partyCodeInput" placeholder="Enter code">
+      <button id="joinParty">Join Party</button>
+      <p id="partyStatus"></p>
+    </div>
 
-    <!-- Game Scripts -->
-    <script type="module" src="js/network.js"></script>
-    <script type="module" src="js/lobby.js"></script>
-    <script type="module" src="js/game.js"></script>
-    <script type="module" src="js/zombies.js"></script>
-    <script type="module" src="js/main.js"></script>
+    <button id="queueButton">Queue</button>
+  </div>
 
+  <!-- Game Canvas -->
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- Chat -->
+  <div id="chatContainer">
+    <div id="chatMessages"></div>
+    <input id="chatInput" placeholder="Type a message...">
+    <button id="sendChat">Send</button>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="js/network.js"></script>
+  <script type="module" src="js/lobby.js"></script>
+  <script type="module" src="js/game.js"></script>
+  <script type="module" src="js/chat.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
