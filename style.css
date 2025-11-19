@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+#lobby {
+    margin-top: 50px;
+}
+
+.card {
+    background: #222;
+    padding: 15px;
+    margin: 10px auto;
+    width: 250px;
+    border-radius: 8px;
+}
+
+#queueButton {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #4af;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#gameCanvas {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+}

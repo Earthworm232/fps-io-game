@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FPS.IO</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Firebase SDKs (compat version for easier use) -->
+    <script src="https://www.gstatic.com/firebasejs/9.30.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.30.0/firebase-database-compat.js"></script>
+</head>
+<body>
+
+    <!-- Lobby -->
+    <div id="lobby">
+        <h1>FPS.IO</h1>
+
+        <div class="card">
+            <h3>Gamemode</h3>
+            <select id="gamemode">
+                <option value="deathmatch">Deathmatch</option>
+                <option value="battle_royale">Battle Royale</option>
+                <option value="zombies">Zombies (Singleplayer)</option>
+            </select>
+        </div>
+
+        <div class="card">
+            <h3>Party</h3>
+            <button id="createParty">Create Party</button>
+            <input id="partyCodeInput" placeholder="Enter code">
+            <button id="joinParty">Join Party</button>
+            <p id="partyStatus"></p>
+        </div>
+
+        <button id="queueButton">Queue</button>
+    </div>
+
+    <!-- Game Canvas -->
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Game Scripts -->
+    <script type="module" src="js/network.js"></script>
+    <script type="module" src="js/lobby.js"></script>
+    <script type="module" src="js/game.js"></script>
+    <script type="module" src="js/zombies.js"></script>
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
