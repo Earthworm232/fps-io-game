@@ -1,36 +1,65 @@
 body {
-    margin: 0;
-    font-family: Arial;
-    background: #111;
-    color: white;
-    text-align: center;
+  margin: 0;
+  font-family: Arial;
+  background: #111;
+  color: white;
+  text-align: center;
+  overflow: hidden;
 }
 
 #lobby {
-    margin-top: 50px;
+  position: absolute;
+  top: 50px;
+  width: 100%;
 }
 
 .card {
-    background: #222;
-    padding: 15px;
-    margin: 10px auto;
-    width: 250px;
-    border-radius: 8px;
+  background: #222;
+  padding: 15px;
+  margin: 10px auto;
+  width: 250px;
+  border-radius: 8px;
 }
 
 #queueButton {
-    margin-top: 20px;
-    padding: 10px 25px;
-    background: #4af;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 18px;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background: #4af;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
 }
 
 #gameCanvas {
-    display: none;
-    width: 100vw;
-    height: 100vh;
-    background: black;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background: black;
+}
+
+#chatContainer {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 300px;
+  display: none;
+}
+
+#chatMessages {
+  height: 150px;
+  overflow-y: scroll;
+  background: rgba(0,0,0,0.6);
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+#chatInput {
+  width: 200px;
+  padding: 5px;
+}
+
+#sendChat {
+  padding: 5px 10px;
 }
